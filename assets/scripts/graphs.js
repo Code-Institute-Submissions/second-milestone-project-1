@@ -34,9 +34,11 @@ function makeGraphs(error, crimeData) {
         }
     })
     show_total_reported(ndx);
+    show_year_selector(ndx);
     dc.renderAll();
 }
 
+/*------------------------------Number Display--*/
 function show_total_reported(ndx) {
     var totalCrimes = ndx.groupAll().reduceSum(function(d) {
         return d["Total_sum"];
@@ -48,4 +50,17 @@ function show_total_reported(ndx) {
         })
         .group(totalCrimes)
         .formatNumber(d3.format(",.0f"));
+}
+
+/*------------------------------Year selector--*/
+function show_year_selector(ndx){
+    yearDim = ndx.dimension(dc.pluck("year"));
+    yearGroup = yearDim.group();
+    
+    var year = dc.selectMenu("#year-selector")
+    year.dimension(yearDim)
+        .group(yearGroup)
+        .title(function(d) {
+            return d.key;
+        })
 }
