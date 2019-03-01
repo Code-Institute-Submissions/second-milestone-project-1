@@ -35,6 +35,7 @@ function makeGraphs(error, crimeData) {
     })
     show_total_reported(ndx);
     show_year_selector(ndx);
+    show_total_crimes_commited(ndx)
     dc.renderAll();
 }
 
@@ -63,4 +64,21 @@ function show_year_selector(ndx){
         .title(function(d) {
             return d.key;
         })
+}
+
+/*------------------------------Row Chart #number-of-crime-row-chart--*/
+function show_total_crimes_commited(ndx){
+    var violation_dim=ndx.dimension(dc.pluck("violation"));
+    var count_group= violation_dim.group().reduceSum(dc.pluck("Total_sum"));
+    dc.rowChart("#number-of-crime-row-chart")
+      .dimension(violation_dim)
+      .group(count_group)
+      .width(520)
+      .height(400)
+      .title(function(d) { return (d.key + " : " + d.value + ""); })
+      .transitionDuration(300)
+      .elasticX(true)
+      .cap(5)
+      .gap(2)
+      .othersGrouper(false);
 }
