@@ -1,6 +1,14 @@
 queue()
     .defer(d3.csv,"assets/data/crimedata.csv")
     .await(makeGraphs);
+
+var colorCodesOffence=d3.scale.ordinal()
+    .domain(["Sexual assault", "Assault", "Robbery", "Criminal harassment", "Uttering threats"])
+    .range(["#7986CB", "#ed2939", "#fed700", "#0b6623", "#f99245"])
+    
+var colorCodesYear = d3.scale.ordinal()
+    .domain(["2011", "2012"])
+    .range(["#27AEE3", "#50C878"])
     
 function makeGraphs(error, crimeData) {
     //create a cross filter
@@ -35,7 +43,8 @@ function makeGraphs(error, crimeData) {
     })
     show_total_reported(ndx);
     show_year_selector(ndx);
-    show_total_crimes_commited(ndx)
+    show_total_crimes_commited(ndx);
+    show_crimes_reported_each_year(ndx);
     dc.renderAll();
 }
 
@@ -81,4 +90,27 @@ function show_total_crimes_commited(ndx){
       .cap(5)
       .gap(2)
       .othersGrouper(false);
+}
+
+function show_crimes_reported_each_year(ndx){
+    var crimeDim = ndx.dimension(dc.pluck("year"));
+    var crimeGroup = crimeDim.group().reduceSum(dc.pluck("Total_sum"));
+    dc.barChart("#crimes-reported-each-year")
+        .width(380)
+        .height(390)
+        .margins({top: 5, right: 50, bottom: 30, left: 50})
+        .dimension(crimeDim)
+        .group(crimeGroup)
+        .barPadding(.3)
+        .colors(colorCodesYear)
+        .colorAccessor(function(d) {
+            return d.key
+        })
+        .transitionDuration(500)//animates when we filter
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .yAxisLabel("Number of Crimes")
+        .xAxisLabel("Year")
+        .yAxis().ticks(4);
+
 }
