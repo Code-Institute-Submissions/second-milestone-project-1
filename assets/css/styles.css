@@ -134,6 +134,15 @@ and (max-width : 580px){
         line-height: normal;
         padding-left: 20px;
     }
+     #footer-details a i{
+        display:block;
+        margin:0 auto;
+        width:50%;
+    }
+    
+    #footer-details h6{
+        text-align:center !important;
+    }
     
     .year-selector-title{
         text-align:center;
