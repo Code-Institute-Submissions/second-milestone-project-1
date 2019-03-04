@@ -30,14 +30,15 @@ h3{
 .analysis{
     padding-top: 40px;
     padding-bottom:20px;
-    padding-left:30px;
+    padding-left:35px;
 }
 
 
 /*-----------------------------Containers-*/
 .chart-container-2,
 .chart-container-3,
-.chart-container-4{
+.chart-container-4,
+.chart-container-5{
     display: inline-block;
     width: 100%;
     margin: 0 auto;
@@ -109,6 +110,13 @@ h3{
 .chart-container-4{
     padding-top: 20px;
     padding-left: 100px;
+    padding-bottom:30px;
+}
+
+/*----------------------------Stack Chart Styles*/
+.chart-container-5{
+    padding-top: 20px;
+    padding-left: 80px;
 }
 
 /*------------------Footer*/
@@ -217,7 +225,8 @@ and (max-width : 699px){
     
     .chart-container-2,
     .chart-container-3,
-    .chart-container-4{
+    .chart-container-4,
+    .chart-container-5{
         overflow: hidden;
         overflow-x: scroll;
         padding-left: 10px;

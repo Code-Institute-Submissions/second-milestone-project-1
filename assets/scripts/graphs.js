@@ -4,7 +4,7 @@ queue()
 
 var colorCodesOffence=d3.scale.ordinal()
     .domain(["Sexual assault", "Assault", "Robbery", "Criminal harassment", "Uttering threats"])
-    .range(["#7986CB", "#ed2939", "#fed700", "#0b6623", "#f99245"])
+    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56"])
     
 var colorCodesYear = d3.scale.ordinal()
     .domain(["2011", "2012"])
@@ -88,6 +88,10 @@ function show_total_crimes_commited(ndx){
       .height(400)
       .title(function(d) { return (d.key + " : " + d.value + ""); })
       .transitionDuration(300)
+      .colorAccessor(function(d) {
+            return d.key;
+        })
+      .colors(colorCodesOffence)
       .elasticX(true)
       .cap(5)
       .gap(2)
@@ -131,6 +135,7 @@ function show_total_crime_each_province(ndx){
         .label(function(d) {
             return d.value;
         })
+        .colors(d3.scale.ordinal().range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#ef5675", "#ff764a", "#ffa600"]))
         .width(570)
         .height(285)
         .transitionDuration(500);
@@ -183,7 +188,7 @@ function show_offence_per_year(ndx) {
 	
     var stackedChart = dc.barChart("#offence-per-year");
     stackedChart
-         .width(320)
+         .width(600)
         .height(400)
         .dimension(name_dim)
         .group(sexual_assault, "Sexual assault")
@@ -194,9 +199,10 @@ function show_offence_per_year(ndx) {
         .x(d3.scale.ordinal())
           .barPadding(.1)
         .xUnits(dc.units.ordinal)
-        .colors(d3.scale.ordinal().range(['#009fab', '#8090c2','#727272','#38cdf1','#074d5e']))
+        .colors(d3.scale.ordinal().range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56"]))
+        .xAxisLabel("Year")
          .yAxisLabel("Number of crimes recorded")
-		 .margins({top: 20, left: 20, bottom: 50, right: 10})
+		 .margins({top: 20, left: 80, bottom: 50, right: 200})
         .legend(dc.legend().x(420).y(170).itemHeight(15).gap(5))
     
 }
