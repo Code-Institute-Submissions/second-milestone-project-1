@@ -45,6 +45,8 @@ function makeGraphs(error, crimeData) {
     show_year_selector(ndx);
     show_total_crimes_commited(ndx);
     show_crimes_reported_each_year(ndx);
+    show_total_crime_each_province(ndx);
+    show_offence_per_year(ndx);
     dc.renderAll();
 }
 
@@ -96,7 +98,7 @@ function show_crimes_reported_each_year(ndx){
     var crimeDim = ndx.dimension(dc.pluck("year"));
     var crimeGroup = crimeDim.group().reduceSum(dc.pluck("Total_sum"));
     dc.barChart("#crimes-reported-each-year")
-        .width(380)
+        .width(400)
         .height(390)
         .margins({top: 5, right: 50, bottom: 30, left: 50})
         .dimension(crimeDim)
@@ -113,4 +115,88 @@ function show_crimes_reported_each_year(ndx){
         .xAxisLabel("Year")
         .yAxis().ticks(4);
 
+}
+function show_total_crime_each_province(ndx){
+
+    var provinceDim=ndx.dimension(dc.pluck('province'));
+    var provinceGroup= provinceDim.group().reduceSum(dc.pluck('Total_sum'));
+    
+    dc.pieChart("#total_crime_each_province")
+   
+        .dimension(provinceDim)
+        .group(provinceGroup)
+        .radius(200)
+        .innerRadius(25)
+        .legend(dc.legend().x(5).y(10).itemHeight(25).gap(1))
+        .label(function(d) {
+            return d.value;
+        })
+        .width(570)
+        .height(285)
+        .transitionDuration(500);
+}
+
+function show_offence_per_year(ndx) {
+    var name_dim = ndx.dimension(dc.pluck('year'));
+    var sexual_assault = name_dim.group().reduceSum(function(d) {
+        if (d.violation === 'Sexual assault') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+
+    
+    var assault = name_dim.group().reduceSum(function(d) {
+        if (d.violation === 'Assault') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+	 var robbery = name_dim.group().reduceSum(function(d) {
+        if (d.violation === 'Robbery') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+  var criminal_harassment = name_dim.group().reduceSum(function(d) {
+        if (d.violation === 'Criminal harassment') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+	 var uttering_threats = name_dim.group().reduceSum(function(d) {
+        if (d.violation === 'Uttering threats'){
+			return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+	
+    var stackedChart = dc.barChart("#offence-per-year");
+    stackedChart
+         .width(320)
+        .height(400)
+        .dimension(name_dim)
+        .group(sexual_assault, "Sexual assault")
+        .stack(assault, "Assault")
+		.stack(robbery ,"Robbery")
+		.stack(criminal_harassment, "Criminal harassment")
+		.stack(uttering_threats, "Uttering threats")
+        .x(d3.scale.ordinal())
+          .barPadding(.1)
+        .xUnits(dc.units.ordinal)
+        .colors(d3.scale.ordinal().range(['#009fab', '#8090c2','#727272','#38cdf1','#074d5e']))
+         .yAxisLabel("Number of crimes recorded")
+		 .margins({top: 20, left: 20, bottom: 50, right: 10})
+        .legend(dc.legend().x(420).y(170).itemHeight(15).gap(5))
+    
 }

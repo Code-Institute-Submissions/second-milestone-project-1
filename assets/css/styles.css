@@ -14,19 +14,29 @@ p{
 h3{
      font-family: 'Yanone Kaffeesatz', sans-serif;
 }
-.row-chart-title,
+
+.row-chart-title{
+    padding-top: 20px;
+    padding-bottom:20px;
+    padding-left: 135px;
+}
+
 .bar-chart-title{
     padding-top: 20px;
-    padding-left: 25px;
+    padding-bottom:20px;
+
 }
+
 
 /*-----------------------------Containers-*/
 .chart-container-2,
-.chart-container-3{
+.chart-container-3,
+.chart-container-4{
     display: inline-block;
     width: 100%;
     margin: 0 auto;
 }
+
 
 /*---------------------------Number Display styles*/
 .column{
@@ -54,7 +64,7 @@ h3{
 }
 
 /*---------------------------Row Chart styles*/
-#number-of-crime-row-chart>svg>g>g.row>text {
+#number-of-crime-row-chart>svg>g>g.row>text{
     fill: #000000;
     font-weight:600;
     font-size: 18px;
@@ -63,9 +73,36 @@ h3{
     letter-spacing: 0.1em;
 }
 
+.chart-container-2{
+    padding-left: 80px;
+    padding-bottom: 40px;
+
+}
 /*----------------------------Bar Chart Styles*/
 .chart-container-3{
-    padding-left: 120px;
+    padding-top: 20px;
+    padding-left: 80px;
+}
+/*----------------------------Pie Chart Styles*/
+
+
+#total_crime_each_province{
+   fill: #000000;
+   font-size: 50px;
+   font-family: 'Yanone Kaffeesatz', sans-serif;
+   text-transform: uppercase; 
+}
+.dc-chart text.pie-slice{
+    fill:black;
+    font-size: 15px;
+    font-weight: 400;
+   font-family: 'Yanone Kaffeesatz', sans-serif;
+  
+}
+
+.chart-container-4{
+    padding-top: 20px;
+    padding-left: 100px;
 }
 
 /*------------------Footer*/
@@ -119,6 +156,7 @@ footer{
         padding-left: 20px;
     }
     
+    .row-chart-title,
     .year-selector-title{
         text-align:center;
         padding-top:20px;
@@ -165,13 +203,15 @@ and (max-width : 699px){
         padding-left: 20px;
     }
     
+    .row-chart-title,
     .year-selector-title{
         text-align:center;
         padding-top:20px;
     }
     
     .chart-container-2,
-    .chart-container-3{
+    .chart-container-3,
+    .chart-container-4{
         overflow: hidden;
         overflow-x: scroll;
         padding-left: 10px;
