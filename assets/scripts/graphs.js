@@ -8,7 +8,7 @@ var colorCodesOffence=d3.scale.ordinal()
     
 var colorCodesYear = d3.scale.ordinal()
     .domain(["2011", "2012"])
-    .range(["#27AEE3", "#50C878"])
+    .range(["#51A0D5","#FD6A02"])
     
 function makeGraphs(error, crimeData) {
     //create a cross filter
@@ -204,7 +204,7 @@ function show_offence_per_year(ndx) {
         .xAxisLabel("Year")
          .yAxisLabel("Number of crimes recorded")
 		 .margins({top: 20, left: 80, bottom: 50, right: 200})
-        .legend(dc.legend().x(420).y(170).itemHeight(15).gap(5))
+        .legend(dc.legend().x(380).y(170).itemHeight(15).gap(5))
     
 }
 function show_year_per_offence(ndx) {
@@ -231,7 +231,7 @@ function show_year_per_offence(ndx) {
 	
     var stackedChart = dc.barChart("#offence-per-year1");
     stackedChart
-         .width(750)
+         .width(630)
         .height(380)
         .dimension(year_dim)
         .group(year2011, "2011")
