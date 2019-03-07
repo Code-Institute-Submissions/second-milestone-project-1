@@ -33,12 +33,17 @@ h3{
     padding-left:35px;
 }
 
+.stack-chart-title{
+    padding-top:40px;
+}
+
 
 /*-----------------------------Containers-*/
 .chart-container-2,
 .chart-container-3,
 .chart-container-4,
-.chart-container-5{
+.chart-container-5,
+.chart-container-6{
     display: inline-block;
     width: 100%;
     margin: 0 auto;
@@ -114,10 +119,19 @@ h3{
 }
 
 /*----------------------------Stack Chart Styles*/
-.chart-container-5{
+.chart-container-5,
+.chart-container-6{
     padding-top: 20px;
     padding-left: 80px;
 }
+#offence-per-year1>svg>g>g.axis.x>g>text {
+   text-anchor: end!important;
+   transform: rotate(-29deg);
+   font-weight: bold;
+   font-size:8px;
+}
+
+/*  rotating text on x axis https://github.com/dc-js/dc.js/issues/731*/
 
 /*------------------Footer*/
 footer{
@@ -177,11 +191,7 @@ footer{
     }
     
  
-    .chart-container-2,
-    .chart-container-3{
-        padding-left: 140px;
-   }
-    
+
     #footer-details a i{
         display:block;
         margin:0 auto;
@@ -226,7 +236,8 @@ and (max-width : 699px){
     .chart-container-2,
     .chart-container-3,
     .chart-container-4,
-    .chart-container-5{
+    .chart-container-5,
+    .chart-container-6{
         overflow: hidden;
         overflow-x: scroll;
         padding-left: 10px;

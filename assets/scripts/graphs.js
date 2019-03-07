@@ -47,6 +47,7 @@ function makeGraphs(error, crimeData) {
     show_crimes_reported_each_year(ndx);
     show_total_crime_each_province(ndx);
     show_offence_per_year(ndx);
+    show_year_per_offence(ndx);
     dc.renderAll();
 }
 
@@ -206,3 +207,41 @@ function show_offence_per_year(ndx) {
         .legend(dc.legend().x(420).y(170).itemHeight(15).gap(5))
     
 }
+function show_year_per_offence(ndx) {
+    var year_dim = ndx.dimension(dc.pluck('violation'));
+    var year2011 = year_dim.group().reduceSum(function(d) {
+        if (d.year === '2011') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+
+    
+    var year2012 = year_dim.group().reduceSum(function(d) {
+        if (d.year === '2011') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+
+	
+    var stackedChart = dc.barChart("#offence-per-year1");
+    stackedChart
+         .width(750)
+        .height(380)
+        .dimension(year_dim)
+        .group(year2011, "2011")
+        .stack(year2012, "2012")
+        .x(d3.scale.ordinal())
+          .barPadding(.1)
+        .xUnits(dc.units.ordinal)
+        .yAxisLabel("Proportion of offences recorded in 2011- 2012")
+		 .margins({top: 20, left: 80, bottom: 50, right: 200})
+        .legend(dc.legend().x(420).y(20).itemHeight(15).gap(5))
+    
+}
+
