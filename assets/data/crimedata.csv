@@ -1,4 +1,154 @@
 english name,province,violation,year,count
+Newfoundland and Labrador,NL,Sexual assault,2008,82.16
+Newfoundland and Labrador,NL,Assault,2008,674.43
+Newfoundland and Labrador,NL,Robbery,2008,27.06
+Newfoundland and Labrador,NL,Criminal harassment,2008,38.91
+Newfoundland and Labrador,NL,Uttering threats,2008,349.16
+Prince Edward Island,PE,Sexual assault,2008,55.18
+Prince Edward Island,PE,Assault,2008,483.7
+Prince Edward Island,PE,Robbery,2008,17.2
+Prince Edward Island,PE,Criminal harassment,2008,70.94
+Prince Edward Island,PE,Uttering threats,2008,247.23
+Nova Scotia,NS,Sexual assault,2008,72.32
+Nova Scotia,NS,Assault,2008,693.89
+Nova Scotia,NS,Robbery,2008,61.76
+Nova Scotia,NS,Criminal harassment,2008,47.04
+Nova Scotia,NS,Uttering threats,2008,418.68
+New Brunswick,NB,Sexual assault,2008,75.38
+New Brunswick,NB,Assault,2008,628.99
+New Brunswick,NB,Robbery,2008,28.12
+New Brunswick,NB,Criminal harassment,2008,79.8
+New Brunswick,NB,Uttering threats,2008,339.8
+Quebec,QC,Sexual assault,2008,54.46
+Quebec,QC,Assault,2008,404.82
+Quebec,QC,Robbery,2008,90.47
+Quebec,QC,Criminal harassment,2008,54.45
+Quebec,QC,Uttering threats,2008,221.65
+Ontario,ON,Sexual assault,2008,55.99
+Ontario,ON,Assault,2008,411.75
+Ontario,ON,Robbery,2008,92.35
+Ontario,ON,Criminal harassment,2008,67.36
+Ontario,ON,Uttering threats,2008,153.04
+Manitoba,MB,Sexual assault,2008,105
+Manitoba,MB,Assault,2008,846.49
+Manitoba,MB,Robbery,2008,158.25
+Manitoba,MB,Criminal harassment,2008,27.04
+Manitoba,MB,Uttering threats,2008,327.94
+Saskatchewan,SK,Sexual assault,2008,113.44
+Saskatchewan,SK,Assault,2008,1181.22
+Saskatchewan,SK,Robbery,2008,125.27
+Saskatchewan,SK,Criminal harassment,2008,56.13
+Saskatchewan,SK,Uttering threats,2008,368.42
+Alberta,AB,Sexual assault,2008,66.92
+Alberta,AB,Assault,2008,690.66
+Alberta,AB,Robbery,2008,106.34
+Alberta,AB,Criminal harassment,2008,45.91
+Alberta,AB,Uttering threats,2008,251.02
+British Columbia,BC,Sexual assault,2008,57.64
+British Columbia,BC,Assault,2008,674.95
+British Columbia,BC,Robbery,2008,123.44
+British Columbia,BC,Criminal harassment,2008,37.63
+British Columbia,BC,Uttering threats,2008,354.33
+Newfoundland and Labrador,NL,Sexual assault,2009,69.34
+Newfoundland and Labrador,NL,Assault,2009,691.42
+Newfoundland and Labrador,NL,Robbery,2009,22.79
+Newfoundland and Labrador,NL,Criminal harassment,2009,44.98
+Newfoundland and Labrador,NL,Uttering threats,2009,358.48
+Prince Edward Island,PE,Sexual assault,2009,43.95
+Prince Edward Island,PE,Assault,2009,505.48
+Prince Edward Island,PE,Robbery,2009,13.47
+Prince Edward Island,PE,Criminal harassment,2009,80.82
+Prince Edward Island,PE,Uttering threats,2009,326.83
+Nova Scotia,NS,Sexual assault,2009,71.98
+Nova Scotia,NS,Assault,2009,657.16
+Nova Scotia,NS,Robbery,2009,62.09
+Nova Scotia,NS,Criminal harassment,2009,50.93
+Nova Scotia,NS,Uttering threats,2009,387.85
+New Brunswick,NB,Sexual assault,2009,75.21
+New Brunswick,NB,Assault,2009,676.05
+New Brunswick,NB,Robbery,2009,26.54
+New Brunswick,NB,Criminal harassment,2009,81.47
+New Brunswick,NB,Uttering threats,2009,343.09
+Quebec,QC,Sexual assault,2009,53.62
+Quebec,QC,Assault,2009,400.97
+Quebec,QC,Robbery,2009,86.59
+Quebec,QC,Criminal harassment,2009,55.43
+Quebec,QC,Uttering threats,2009,221.01
+Ontario,ON,Sexual assault,2009,53.39
+Ontario,ON,Assault,2009,392.16
+Ontario,ON,Robbery,2009,93.21
+Ontario,ON,Criminal harassment,2009,70.59
+Ontario,ON,Uttering threats,2009,145.47
+Manitoba,MB,Sexual assault,2009,102.3
+Manitoba,MB,Assault,2009,899.91
+Manitoba,MB,Robbery,2009,198.95
+Manitoba,MB,Criminal harassment,2009,21.8
+Manitoba,MB,Uttering threats,2009,336.34
+Saskatchewan,SK,Sexual assault,2009,111.9
+Saskatchewan,SK,Assault,2009,1179.02
+Saskatchewan,SK,Robbery,2009,120.64
+Saskatchewan,SK,Criminal harassment,2009,51.29
+Saskatchewan,SK,Uttering threats,2009,373.87
+Alberta,AB,Sexual assault,2009,60.01
+Alberta,AB,Assault,2009,678.43
+Alberta,AB,Robbery,2009,101.7
+Alberta,AB,Criminal harassment,2009,49.99
+Alberta,AB,Uttering threats,2009,252.02
+British Columbia,BC,Sexual assault,2009,57.33
+British Columbia,BC,Assault,2009,671.7
+British Columbia,BC,Robbery,2009,115.16
+British Columbia,BC,Criminal harassment,2009,47.98
+British Columbia,BC,Uttering threats,2009,347.47
+Newfoundland and Labrador,NL,Sexual assault,2010,71.7
+Newfoundland and Labrador,NL,Assault,2010,665.4
+Newfoundland and Labrador,NL,Robbery,2010,31.65
+Newfoundland and Labrador,NL,Criminal harassment,2010,43.57
+Newfoundland and Labrador,NL,Uttering threats,2010,374.9
+Prince Edward Island,PE,Sexual assault,2010,42.63
+Prince Edward Island,PE,Assault,2010,465.48
+Prince Edward Island,PE,Robbery,2010,15.38
+Prince Edward Island,PE,Criminal harassment,2010,68.49
+Prince Edward Island,PE,Uttering threats,2010,279.57
+Nova Scotia,NS,Sexual assault,2010,70.04
+Nova Scotia,NS,Assault,2010,611.54
+Nova Scotia,NS,Robbery,2010,51.74
+Nova Scotia,NS,Criminal harassment,2010,58.3
+Nova Scotia,NS,Uttering threats,2010,366.82
+New Brunswick,NB,Sexual assault,2010,78.1
+New Brunswick,NB,Assault,2010,664.37
+New Brunswick,NB,Robbery,2010,18.99
+New Brunswick,NB,Criminal harassment,2010,87.93
+New Brunswick,NB,Uttering threats,2010,328.33
+Quebec,QC,Sexual assault,2010,53.11
+Quebec,QC,Assault,2010,389.17
+Quebec,QC,Robbery,2010,81.47
+Quebec,QC,Criminal harassment,2010,55.39
+Quebec,QC,Uttering threats,2010,216.57
+Ontario,ON,Sexual assault,2010,57.05
+Ontario,ON,Assault,2010,384.85
+Ontario,ON,Robbery,2010,87.56
+Ontario,ON,Criminal harassment,2010,72.79
+Ontario,ON,Uttering threats,2010,138.52
+Manitoba,MB,Sexual assault,2010,113.7
+Manitoba,MB,Assault,2010,881.75
+Manitoba,MB,Robbery,2010,176.82
+Manitoba,MB,Criminal harassment,2010,34.47
+Manitoba,MB,Uttering threats,2010,346.52
+Saskatchewan,SK,Sexual assault,2010,107.82
+Saskatchewan,SK,Assault,2010,1186.37
+Saskatchewan,SK,Robbery,2010,121.41
+Saskatchewan,SK,Criminal harassment,2010,62.14
+Saskatchewan,SK,Uttering threats,2010,376.69
+Alberta,AB,Sexual assault,2010,70.84
+Alberta,AB,Assault,2010,628.21
+Alberta,AB,Robbery,2010,86.47
+Alberta,AB,Criminal harassment,2010,55.21
+Alberta,AB,Uttering threats,2010,236.43
+British Columbia,BC,Sexual assault,2010,61.07
+British Columbia,BC,Assault,2010,612.65
+British Columbia,BC,Robbery,2010,108.18
+British Columbia,BC,Criminal harassment,2010,56.03
+British Columbia,BC,Uttering threats,2010,316.33
 Newfoundland and Labrador,NL,Sexual assault,2011,62.59
 Newfoundland and Labrador,NL,Assault,2011,697.41
 Newfoundland and Labrador,NL,Robbery,2011,21.45

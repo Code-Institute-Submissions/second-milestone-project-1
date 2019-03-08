@@ -7,7 +7,7 @@ var colorCodesOffence=d3.scale.ordinal()
     .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56"])
     
 var colorCodesYear = d3.scale.ordinal()
-    .domain(["2011", "2012"])
+    .domain(["2008","2009","2010","2011", "2012"])
     .range(["#51A0D5","#FD6A02"])
     
 function makeGraphs(error, crimeData) {
@@ -43,6 +43,7 @@ function makeGraphs(error, crimeData) {
     })
     show_total_reported(ndx);
     show_year_selector(ndx);
+    show_crime_selector(ndx);
     show_total_crimes_commited(ndx);
     show_crimes_reported_each_year(ndx);
     show_total_crime_each_province(ndx);
@@ -57,12 +58,12 @@ function show_total_reported(ndx) {
         return d["Total_sum"];
     });
     dc.numberDisplay("#total-count")
-        .formatNumber(d3.format("d"))
+        .formatNumber(d3.format(",.0f"))
         .valueAccessor(function(d) {
             return d;
         })
         .group(totalCrimes)
-        .formatNumber(d3.format(",.0f"));
+
 }
 
 /*------------------------------Year selector--*/
@@ -76,6 +77,22 @@ function show_year_selector(ndx){
         .title(function(d) {
             return d.key;
         })
+        .promptText("Select Year")
+        
+}
+/*------------------------------Crime selector--*/
+function show_crime_selector(ndx){
+    crimeDim = ndx.dimension(dc.pluck("violation"));
+    crimeGroup = crimeDim.group();
+    
+    var crime = dc.selectMenu("#crime-selector")
+    crime.dimension(crimeDim)
+        .group(crimeGroup)
+        .title(function(d) {
+            return d.key;
+        })
+        .promptText("Select Crime Type")
+        
 }
 
 /*------------------------------Row Chart #number-of-crime-row-chart--*/
@@ -97,6 +114,7 @@ function show_total_crimes_commited(ndx){
       .cap(5)
       .gap(2)
       .othersGrouper(false);
+  
 }
 
 function show_crimes_reported_each_year(ndx){
@@ -209,6 +227,33 @@ function show_offence_per_year(ndx) {
 }
 function show_year_per_offence(ndx) {
     var year_dim = ndx.dimension(dc.pluck('violation'));
+     var year2008 = year_dim.group().reduceSum(function(d) {
+        if (d.year === '2008') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+
+    
+    var year2009 = year_dim.group().reduceSum(function(d) {
+        if (d.year === '2009') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+
+     var year2010 = year_dim.group().reduceSum(function(d) {
+        if (d.year === '2010') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
     var year2011 = year_dim.group().reduceSum(function(d) {
         if (d.year === '2011') {
             return +d.count;
@@ -234,7 +279,10 @@ function show_year_per_offence(ndx) {
          .width(630)
         .height(380)
         .dimension(year_dim)
-        .group(year2011, "2011")
+        .group(year2008, "2008")
+        .stack(year2012, "2009")
+        .stack(year2012, "2010")
+        .stack(year2012, "2011")
         .stack(year2012, "2012")
         .x(d3.scale.ordinal())
           .barPadding(.1)

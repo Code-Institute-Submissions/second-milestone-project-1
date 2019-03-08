@@ -36,6 +36,11 @@ h3{
 .stack-chart-title{
     padding-top:40px;
 }
+.dc-chart .axis text {
+       font-family:'Roboto',sans-serif;
+ 
+}
+
 
 
 /*-----------------------------Containers-*/
@@ -48,6 +53,7 @@ h3{
     width: 100%;
     margin: 0 auto;
 }
+
 
 
 /*---------------------------Number Display styles*/
@@ -74,6 +80,8 @@ h3{
 #number-display-chart{
    max-width:900px;
 }
+
+
 
 /*---------------------------Row Chart styles*/
 #number-of-crime-row-chart>svg>g>g.row>text{
@@ -149,6 +157,11 @@ h3{
    bottom: 30px;
    z-index: 2;
    border-radius: 5px;
+}
+
+.reset-button:hover {
+  background-color: #4CAF50;
+  color: white;
 }
 
 /*------------------Footer*/
