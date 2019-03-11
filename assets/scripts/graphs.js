@@ -8,7 +8,7 @@ var colorCodesOffence=d3.scale.ordinal()
     
 var colorCodesYear = d3.scale.ordinal()
     .domain(["2008","2009","2010","2011", "2012"])
-    .range(["#51A0D5","#FD6A02"])
+    .range(["#51A0D5","#FD6A02","#4C9900","#CC0000","#B266FF"])
     
 function makeGraphs(error, crimeData) {
     //create a cross filter
@@ -104,7 +104,6 @@ function show_total_crimes_commited(ndx){
       .group(count_group)
       .width(520)
       .height(400)
-      .title(function(d) { return (d.key + " : " + d.value + ""); })
       .transitionDuration(300)
       .colorAccessor(function(d) {
             return d.key;
@@ -121,9 +120,9 @@ function show_crimes_reported_each_year(ndx){
     var crimeDim = ndx.dimension(dc.pluck("year"));
     var crimeGroup = crimeDim.group().reduceSum(dc.pluck("Total_sum"));
     dc.barChart("#crimes-reported-each-year")
-        .width(400)
+        .width(500)
         .height(390)
-        .margins({top: 5, right: 50, bottom: 30, left: 50})
+        .margins({top: 5, right: 50, bottom: 40, left: 50})
         .dimension(crimeDim)
         .group(crimeGroup)
         .barPadding(.3)
@@ -288,7 +287,8 @@ function show_year_per_offence(ndx) {
           .barPadding(.1)
         .xUnits(dc.units.ordinal)
         .yAxisLabel("Proportion of offences recorded in 2011- 2012")
-		 .margins({top: 20, left: 80, bottom: 50, right: 200})
+        .xAxisLabel("Types of Crimes")
+		 .margins({top: 20, left: 80, bottom: 80, right: 200})
         .legend(dc.legend().x(420).y(20).itemHeight(15).gap(5))
     
 }
