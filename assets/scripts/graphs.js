@@ -49,6 +49,7 @@ function makeGraphs(error, crimeData) {
     show_total_crime_each_province(ndx);
     show_offence_per_year(ndx);
     show_year_per_offence(ndx);
+    show_offence_per_province(ndx);
     dc.renderAll();
 }
 
@@ -290,6 +291,73 @@ function show_year_per_offence(ndx) {
         .xAxisLabel("Types of Crimes")
 		 .margins({top: 20, left: 80, bottom: 80, right: 200})
         .legend(dc.legend().x(420).y(20).itemHeight(15).gap(5))
+    
+}
+
+
+function show_offence_per_province(ndx) {
+    var province_dim = ndx.dimension(dc.pluck('province'));
+    var assault = province_dim.group().reduceSum(function(d) {
+        if (d.violation === 'Assault') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+
+    var uttering_threats= province_dim.group().reduceSum(function(d) {
+        if (d.violation === 'Uttering threats') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+        var robbery= province_dim.group().reduceSum(function(d) {
+        if (d.violation === 'Robbery') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+
+    var sexual_assault= province_dim.group().reduceSum(function(d) {
+        if (d.violation === 'Sexual assault') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+
+   var criminal_harassment= province_dim.group().reduceSum(function(d) {
+        if (d.violation === 'Criminal harassment') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+
+	
+    var stackedChart = dc.barChart("#offence-per-province");
+    stackedChart
+         .width(600)
+        .height(380)
+        .dimension(province_dim)
+        .group(assault, "Assault")
+            .stack(uttering_threats, "Uttering Threats")   
+         .stack(robbery, "Robbery")
+          .stack(sexual_assault, "Sexual Assault")
+          .stack(criminal_harassment, "Criminal harassment")
+        .x(d3.scale.ordinal())
+          .barPadding(.1)
+        .xUnits(dc.units.ordinal)
+        .yAxisLabel("Proportion of offences recorded in 2011- 2012")
+		 .margins({top: 20, left: 80, bottom: 50, right: 200})
+        .legend(dc.legend().x(420).y(170).itemHeight(15).gap(5))
     
 }
 
