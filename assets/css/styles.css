@@ -16,25 +16,26 @@ h3{
      font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-.row-chart-title{
-    padding-top: 20px;
+.row-chart-title,
+.bar-chart-title{
+    padding-top: 40px;
     padding-bottom:20px;
+
+}
+.row-chart-title{
     padding-left: 50px;
 }
 
-.bar-chart-title{
-    padding-top: 20px;
-    padding-bottom:20px;
-
-}
-.analysis{
-    padding-top: 40px;
-    padding-bottom:20px;
-    padding-left:35px;
-}
-
-.stack-chart-title{
+.pie-chart-title{
     padding-top:40px;
+}
+.stack-chart-title-province{
+    padding-top:30px;
+}
+
+.stack-chart-title-compare,
+.stack-chart-title-year{
+        padding-top:50px;
 }
 .dc-chart .axis text {
        font-family:'Roboto',sans-serif;
@@ -121,24 +122,32 @@ h3{
 }
 
 .chart-container-4{
-    padding-top: 20px;
+    padding-top: 50px;
     padding-left: 50px;
     padding-bottom:30px;
 }
 
 /*----------------------------Stack Chart Styles*/
 .chart-container-5,
-.chart-container-6{
-    padding-top: 20px;
-    padding-left: 30px;
+.chart-container-6,
+.chart-container-8{
+    padding-top: 40px;
+
 }
 
-/*  rotating text on x axis https://github.com/dc-js/dc.js/issues/731*/
+
 #offence-per-year1>svg>g>g.axis.x>g>text {
    text-anchor: end!important;
    transform: rotate(-29deg);
    font-weight: bold;
    font-size:8px;
+}
+
+/*  rotating text on x axis https://github.com/dc-js/dc.js/issues/731*/
+#offence-per-province>svg>g>g.axis.x>g>text {
+   text-anchor: end!important;
+   transform: rotate(-29deg);
+   font-size:10px;
 }
 
 
@@ -268,7 +277,8 @@ and (max-width : 699px){
     .chart-container-3,
     .chart-container-4,
     .chart-container-5,
-    .chart-container-6{
+    .chart-container-6,
+    .chart-container-8{
         overflow: hidden;
         overflow-x: scroll;
         padding-left: 10px;

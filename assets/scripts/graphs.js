@@ -16,7 +16,7 @@ function makeGraphs(error, crimeData) {
 	 crimeData.forEach(function(d) {
         d.Total_sum = parseInt(d["count"]);
     });
-    crimeData.forEach(function(d) {
+     crimeData.forEach(function(d) {
         if (d.province === "NL") {
             d.province = "Newfoundland and Labrador"
         }else if (d.province === "PE") {
@@ -117,12 +117,13 @@ function show_total_crimes_commited(ndx){
   
 }
 
+/*------------------------------Bar Chart #crimes-reported-each-year--*/
 function show_crimes_reported_each_year(ndx){
     var crimeDim = ndx.dimension(dc.pluck("year"));
     var crimeGroup = crimeDim.group().reduceSum(dc.pluck("Total_sum"));
     dc.barChart("#crimes-reported-each-year")
         .width(500)
-        .height(390)
+        .height(400)
         .margins({top: 5, right: 50, bottom: 40, left: 50})
         .dimension(crimeDim)
         .group(crimeGroup)
@@ -139,6 +140,8 @@ function show_crimes_reported_each_year(ndx){
         .yAxis().ticks(4);
 
 }
+
+/*------------------------------Pie Chart #total_crime_each_province--*/
 function show_total_crime_each_province(ndx){
 
     var provinceDim=ndx.dimension(dc.pluck('province'));
@@ -160,6 +163,75 @@ function show_total_crime_each_province(ndx){
         .transitionDuration(500);
 }
 
+/*------------------------------Stacked Chart #offence-per-province--*/
+function show_offence_per_province(ndx) {
+    var province_dim = ndx.dimension(dc.pluck('province'));
+    var assault = province_dim.group().reduceSum(function(d) {
+        if (d.violation === 'Assault') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+
+    var uttering_threats= province_dim.group().reduceSum(function(d) {
+        if (d.violation === 'Uttering threats') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+        var robbery= province_dim.group().reduceSum(function(d) {
+        if (d.violation === 'Robbery') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+
+    var sexual_assault= province_dim.group().reduceSum(function(d) {
+        if (d.violation === 'Sexual assault') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+
+   var criminal_harassment= province_dim.group().reduceSum(function(d) {
+        if (d.violation === 'Criminal harassment') {
+            return +d.count;
+        }
+        else {
+            return 0;
+        }
+    });
+
+	
+    var stackedChart = dc.barChart("#offence-per-province");
+    stackedChart
+        .width(620)
+        .height(390)
+        .dimension(province_dim)
+        .group(assault, "Assault")
+            .stack(uttering_threats, "Uttering Threats")   
+         .stack(robbery, "Robbery")
+          .stack(sexual_assault, "Sexual Assault")
+          .stack(criminal_harassment, "Criminal harassment")
+        .x(d3.scale.ordinal())
+        .barPadding(.1)
+        .xUnits(dc.units.ordinal)
+        .yAxisLabel("Proportion of offences recorded in 2008 - 2012")
+        .xAxisLabel("Provinces")
+		 .margins({top: 20, left: 80, bottom: 100, right: 200})
+        .legend(dc.legend().x(450).y(10).itemHeight(15).gap(8))
+    
+}
+
+/*------------------------------Stacked Chart #offence-per-year--*/
 function show_offence_per_year(ndx) {
     var name_dim = ndx.dimension(dc.pluck('year'));
     var sexual_assault = name_dim.group().reduceSum(function(d) {
@@ -277,7 +349,7 @@ function show_year_per_offence(ndx) {
     var stackedChart = dc.barChart("#offence-per-year1");
     stackedChart
          .width(630)
-        .height(380)
+        .height(400)
         .dimension(year_dim)
         .group(year2008, "2008")
         .stack(year2012, "2009")
@@ -295,69 +367,5 @@ function show_year_per_offence(ndx) {
 }
 
 
-function show_offence_per_province(ndx) {
-    var province_dim = ndx.dimension(dc.pluck('province'));
-    var assault = province_dim.group().reduceSum(function(d) {
-        if (d.violation === 'Assault') {
-            return +d.count;
-        }
-        else {
-            return 0;
-        }
-    });
 
-    var uttering_threats= province_dim.group().reduceSum(function(d) {
-        if (d.violation === 'Uttering threats') {
-            return +d.count;
-        }
-        else {
-            return 0;
-        }
-    });
-        var robbery= province_dim.group().reduceSum(function(d) {
-        if (d.violation === 'Robbery') {
-            return +d.count;
-        }
-        else {
-            return 0;
-        }
-    });
-
-    var sexual_assault= province_dim.group().reduceSum(function(d) {
-        if (d.violation === 'Sexual assault') {
-            return +d.count;
-        }
-        else {
-            return 0;
-        }
-    });
-
-   var criminal_harassment= province_dim.group().reduceSum(function(d) {
-        if (d.violation === 'Criminal harassment') {
-            return +d.count;
-        }
-        else {
-            return 0;
-        }
-    });
-
-	
-    var stackedChart = dc.barChart("#offence-per-province");
-    stackedChart
-         .width(600)
-        .height(380)
-        .dimension(province_dim)
-        .group(assault, "Assault")
-            .stack(uttering_threats, "Uttering Threats")   
-         .stack(robbery, "Robbery")
-          .stack(sexual_assault, "Sexual Assault")
-          .stack(criminal_harassment, "Criminal harassment")
-        .x(d3.scale.ordinal())
-          .barPadding(.1)
-        .xUnits(dc.units.ordinal)
-        .yAxisLabel("Proportion of offences recorded in 2011- 2012")
-		 .margins({top: 20, left: 80, bottom: 50, right: 200})
-        .legend(dc.legend().x(420).y(170).itemHeight(15).gap(5))
-    
-}
 
