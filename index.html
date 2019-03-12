@@ -18,10 +18,11 @@
 </head>
 <body>
      <!--Navigation bar https://bootswatch.com/flatly/-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <h1>National Crime Data Dashboard-Canada</h1>
     </nav>
-    <a class="reset-button" href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
+    <a class="reset-button" title="Reset all" href="javascript:dc.filterAll(); dc.renderAll();" >Reset All</a>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <section>
         <div class="container-fluid">
             <div class="row">
@@ -120,13 +121,10 @@
     
     <footer class="container-fluid">
         <div id="footer-details" class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-6">
                 <a target="_blank" href="https://github.com/nadia-solution-tracker/second-milestone-project"><i class="fa fa-github"></i></a>            
             </div>
-            <div class="col-sm-4 text-center">
-                <a id="go-to-top" href="#header"><span class="glyphicon glyphicon-chevron-up"></span>Back to top</a>
-            </div>
-            <div class="col-sm-4">
+            <div class="col-sm-6">
                 <h6 class="inline-block text-right">
                        &copy;2019 Nadia Barreto <br/>
                        A CODE INSITITUTE MILESTONE PROJECT
@@ -147,5 +145,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
     <!--Custom JS file for charts-->
     <script src="assets/scripts/graphs.js"></script>
+    <script src="assets/scripts/myscripts.js"></script>
 </body>
 </html>

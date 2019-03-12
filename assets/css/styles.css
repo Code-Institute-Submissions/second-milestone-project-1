@@ -152,7 +152,7 @@ h3{
 
 
 
-/*--------------------------------Reset Button*/
+/*--------------------------------Reset Button and top button*/
 .reset-button {
    color: #ffffff;
    text-decoration: none;
@@ -169,8 +169,28 @@ h3{
 }
 
 .reset-button:hover {
-  background-color: #4CAF50;
+  background-color: #555;
   color: white;
+  text-decoration: none;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 15px;
+  border: none;
+   padding: 5px 10px;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
 }
 
 /*------------------Footer*/
