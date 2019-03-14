@@ -49,3 +49,19 @@ Following features have been implemented for ease of use
 - <b>Reset button</b> is provided to cancel out any filters made.
 - <b>Top button </b> a scrollable top button appears to the right of the page when the users scrolls along.
 - <b>Footer</b> displays social media connector as  a clickable icon that can be directed to my github website and a back to top button that takes a user to the top of the page.
+
+## Technologies used includes:
+<b>HTML5</b>: to create structure of webpage.
+<b>CSS3</b>: to style webpage, I used external stylesheet, file located in assets/css/style.css .
+<b>Bootstrap v 3.3.7</b>- For css styling, I used grid and responsive behavior of controls.
+       CDN link included from https://getbootstrap.com/docs/3.3/getting-started/.
+       for controls and classes https://getbootstrap.com/docs/3.3/css/.
+<b>Javascript  and JQuery</b>: Used Jquery for interactivity and client side chart rendering
+<b>Google Fonts</b>: for additional font-family options https://fonts.google.com/. 
+Fonts used are Roboto|Yanone+Kaffeesatz
+<b>Font Awesome</b>: for social media icons and envelope icon https://fontawesome.com/.
+<b>JS Libraries to visualise, explore and filter datasets</b>
+- d3.js- used to build charts
+- crossfilter.js-filters data in csv file
+- dc.js : makes d3 and crossfilter work swimmingly
+- queue.js: Use to load data
