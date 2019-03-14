@@ -113,3 +113,9 @@ This step is perfomed for any changes I have done to sections in webpages and st
 4. Created a new repository in Github and in the terminal, added the URL for the remote repository where your local repository will be pushed.
 5. On major changes I have pushed the changes in the local repository to GitHub. 
 `$git push origin master`
+
+
+On Github 
+Click Settings of the repository hosting the project and generated the external link.
+[Link to Github pages](https://github.com/nadia-solution-tracker/second-milestone-project)
+[Link to Final Project](https://nadia-solution-tracker.github.io/second-milestone-project/)
