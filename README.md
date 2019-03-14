@@ -78,3 +78,21 @@ The single scrollable webpage is tested across the following browsers,
 -  W3C Markup Validation Service (https://validator.w3.org/).
 -  Mobile Friendly Testing Tool(https://search.google.com/test/mobile-friendly
 - Chrome Dev tools for inspect elements for styling purpose and media queries
+
+
+## Testing scenarios
+Selection of a proper dataset was an initial problem when I decide to go with the Dashboard project.
+Finally I got my eyes on the Crime Data dashboard for Chicago and thought it would be great to do a dashboard for Canada. While researching I came across datasets which had huge amount of information which made it quite impossible for me to work it. 
+Finally I got a dataset which I pivoted to work best to the Crime dashboard I wanted to create.
+This included creating a sample testpage in html of all kinds of graphs I could create with the information in hand and testing if it worked as per what I required. Here I didnt focus on designing
+
+[Link to sample testpage](https://www.dropbox.com/s/1y1rpgajj7gxk7n/SampleHtml.JPG?dl=0)
+
+On the final webpage the following test has been performed
+- Every chart on the webpage has been tested to be filtered and reflect the value in a tooltip when user moves cursor over the selection
+- The responsive behavior of the website is been  in Google Chrome Developer tools responsive mode on Galaxy S5, Pixel 2, Pixel 2XL,iPhone 5/SE, iPhone 6/7/8, iPhone Plus 6/7/8, iPhone X, iPad, iPad Pro.
+- I tried making the charts resizable over the various devices but had issues with overlapping and extra width creation in the nav bar. So to solve this issue I added a css property of  overflow-x: scroll; when the website is been viewed on mobiles or ipad.
+- I tried various layouts during design process and found the it better to have two graphs side by side, this worked well with reponsiveness and also made the webpage look neat and less cluttered.
+- Color codes have been use to make the charts more consistent to reduces the mental effort users have to make to understand what they are seeing.
+- Reset Button is been tested to check if the filters get reset.
+- The scrollable Top button is tested to check of it appears when the page is been scrolled Javascript code has been used to activate this feature
