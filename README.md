@@ -6,7 +6,7 @@ From all Canada&apos;s crime reports that have occurred in different provinces e
 Here I have developed a visualization system using data from Ontario&apos;s Data Catalogue.
 
 
-![IMAGE](assets/images/Dashboard.jpg)
+![IMAGE](assets/images/Dashboard.JPG)
 ## User experience (UX) design
 The following features have been added to make the user experience interactive
 - The Crime Data Dashboard is a single page application with a fixed top nav bar. 
