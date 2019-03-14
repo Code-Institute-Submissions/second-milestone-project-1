@@ -96,3 +96,20 @@ On the final webpage the following test has been performed
 - Color codes have been use to make the charts more consistent to reduces the mental effort users have to make to understand what they are seeing.
 - Reset Button is been tested to check if the filters get reset.
 - The scrollable Top button is tested to check of it appears when the page is been scrolled Javascript code has been used to activate this feature
+
+## Deployment
+
+Project is built and developed on [Cloud9](https://c9.io/) workspace
+
+The files have been edited in this development instance. When ready, the changes were "deployed" to the staging instance. After user acceptance and testing, deploy again, this time to production. I used git and GitHub pages for deployment. 
+
+The following steps are followed to deploy the pages:
+1. Initialised the local directory in my project as a git repository used the cloud9 terminal to perform this step
+`$git init`
+2. Added the files in the local repository created. And staged them for `commit $git add .`
+3. Commited the files that I have staged in the local repository.
+`$git commit –m ”Initial commit”`
+This step is perfomed for any changes I have done to sections in webpages and stylesheets as well as the images and audios folder.
+4. Created a new repository in Github and in the terminal, added the URL for the remote repository where your local repository will be pushed.
+5. On major changes I have pushed the changes in the local repository to GitHub. 
+`$git push origin master`
