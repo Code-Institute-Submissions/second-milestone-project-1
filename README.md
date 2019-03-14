@@ -37,3 +37,15 @@ For a Crime Analyst the dashboard could encourage further investigation, researc
 [Wireframes for Desktop Version Continue](https://www.dropbox.com/s/o4evmz3e46o8szt/DesktopVersion2.jpg?dl=0)<br/>
 [Wireframes fo Mobile Version](https://www.dropbox.com/s/x5nw1pabnu194ru/MobileVersion1.jpg?dl=0)<br/>
 [Wireframes for Mobile Version Continue](https://www.dropbox.com/s/irnyosfytfmdwr4/MobileVersion2.jpg?dl=0)<br/>
+
+## Features
+Following features have been implemented for ease of use
+- <b>Number Display</b>–Displays the total crimes reported per 100,000 inhabitants ,this value changes based on selection made using the year and crime selectors
+- <b>Year selector</b>- Provides a drop down for users to make a selection on the years(2008-2012) to fetch the crimes reported information.
+- <b>Top 5 Offence Row Chart</b>- displays the individual crime record reported. This row chart can be filtered by clicking any crime. This would in turn act as a filter changing the other visualization on the page.
+- <b>Total crimes each year Bar chart</b>- This is a simple visualization displaying the total crimes reported each year.
+- <b>Reported Crimes each province Pie Chart</b>- This chart displayed the crimes reported in the 10 provinces in Canada.
+- <b>Stack Charts</b>- displays total crimes per category per year and vice versa
+- <b>Reset button</b> is provided to cancel out any filters made.
+- <b>Top button </b> a scrollable top button appears to the right of the page when the users scrolls along.
+- <b>Footer</b> displays social media connector as  a clickable icon that can be directed to my github website and a back to top button that takes a user to the top of the page.
