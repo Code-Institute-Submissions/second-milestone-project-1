@@ -116,6 +116,23 @@ This step is perfomed for any changes I have done to sections in webpages and st
 
 
 On Github 
-Click Settings of the repository hosting the project and generated the external link.
-[Link to Github pages](https://github.com/nadia-solution-tracker/second-milestone-project)
-[Link to Final Project](https://nadia-solution-tracker.github.io/second-milestone-project/)
+Click Settings of the repository hosting the project and generated the external link.<br/>
+[Link to Github pages](https://github.com/nadia-solution-tracker/second-milestone-project)<br/>
+[Link to Final Project](https://nadia-solution-tracker.github.io/second-milestone-project/)<br/>
+
+## Credits
+I took inspiration for this project from the Crime Dashboard in Chicago https://towardsdatascience.com/analyzing-crime-with-python-8b28252559ce
+
+
+#### Content
+This project is been developed from the codes learnt throughout the course of Introduction to Data Visualiization design from the videos of Code Insitute. 
+Also referred Bootstrap documentation and W3schools
+For ReadMe file referred README MARKUPS https://pandao.github.io/editor.md/en.html
+Data for this Dashboard has been fetched from https://www.ontario.ca/data/violent-crime-rates which I further modifed.
+
+#### Media
+For the favicon icon https://www.favicon.cc/?action=icon&file_id=58538
+
+
+## Acknowledgements
+I would extend my sincere thanks to my mentor for giving me ideas on optimizing my webpage, However all the work was done by me with references made to links as mentioned in &quot;Credits&quot; and referring &quot;Code Institute Mini Project&quot; videos.
