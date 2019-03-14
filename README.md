@@ -31,3 +31,9 @@ As any one of the users, he/she would be interested in finding information about
 - The graphs can portray different pieces of information to users when different options are selected or when filters are applied.
 
 For a Crime Analyst the dashboard could encourage further investigation, research and study to the subject that is being displayed.
+
+## Wireframes for Desktop and mobile version
+[Wireframes for Desktop Version](https://www.dropbox.com/s/9do41b7vp4l7avr/DesktopVersion1.jpg?dl=0)
+[Wireframes for Desktop Version Continue](https://www.dropbox.com/s/o4evmz3e46o8szt/DesktopVersion2.jpg?dl=0)
+[Wireframes fo Mobile Version](https://www.dropbox.com/s/x5nw1pabnu194ru/MobileVersion1.jpg?dl=0)
+[Wireframes for Mobile Version Continue](https://www.dropbox.com/s/irnyosfytfmdwr4/MobileVersion2.jpg?dl=0)
