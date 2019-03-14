@@ -138,7 +138,6 @@ function show_crimes_reported_each_year(ndx){
         .yAxisLabel("Number of Crimes")
         .xAxisLabel("Year")
         .yAxis().ticks(4);
-
 }
 
 /*------------------------------Pie Chart #total_crime_each_province--*/
@@ -279,7 +278,7 @@ function show_offence_per_year(ndx) {
 	
     var stackedChart = dc.barChart("#offence-per-year");
     stackedChart
-         .width(600)
+        .width(600)
         .height(400)
         .dimension(name_dim)
         .group(sexual_assault, "Sexual assault")
@@ -292,8 +291,8 @@ function show_offence_per_year(ndx) {
         .xUnits(dc.units.ordinal)
         .colors(d3.scale.ordinal().range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56"]))
         .xAxisLabel("Year")
-         .yAxisLabel("Number of crimes recorded")
-		 .margins({top: 20, left: 80, bottom: 50, right: 200})
+        .yAxisLabel("Number of crimes recorded")
+		.margins({top: 20, left: 80, bottom: 50, right: 200})
         .legend(dc.legend().x(380).y(170).itemHeight(15).gap(5))
     
 }
