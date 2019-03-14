@@ -54,8 +54,8 @@ Following features have been implemented for ease of use
 <b>HTML5</b>: to create structure of webpage.<br/>
 <b>CSS3</b>: to style webpage, I used external stylesheet, file located in assets/css/style.css .<br/>
 <b>Bootstrap v 3.3.7</b>- For css styling, I used grid and responsive behavior of controls.<br/>
-       CDN link included from https://getbootstrap.com/docs/3.3/getting-started/.<br/>
-       for controls and classes https://getbootstrap.com/docs/3.3/css/.<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDN link included from https://getbootstrap.com/docs/3.3/getting-started/.<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for controls and classes https://getbootstrap.com/docs/3.3/css/.<br/>
 <b>Javascript  and JQuery</b>: Used Jquery for interactivity and client side chart rendering<br/>
 <b>Google Fonts</b>: for additional font-family options https://fonts.google.com/. <br/>
 Fonts used are Roboto|Yanone+Kaffeesatz<br/>
@@ -65,3 +65,16 @@ Fonts used are Roboto|Yanone+Kaffeesatz<br/>
 - crossfilter.js-filters data in csv file
 - dc.js : makes d3 and crossfilter work swimmingly
 - queue.js: Use to load data
+
+
+## Testing
+The single scrollable webpage is tested across the following browsers,
+- Google Chrome (Testing successfully met requirements)
+- Firefox (Testing successfully met requirements)
+- Internet Explorer (Testing successfully met requirements)
+
+##### Testing Tools Used
+- W3C CSS Validation Service (https://jigsaw.w3.org/css-validator/).
+-  W3C Markup Validation Service (https://validator.w3.org/).
+-  Mobile Friendly Testing Tool(https://search.google.com/test/mobile-friendly
+- Chrome Dev tools for inspect elements for styling purpose and media queries
