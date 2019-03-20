@@ -161,18 +161,18 @@ function show_total_crime_each_province(ndx){
     var provinceGroup= provinceDim.group().reduceSum(dc.pluck('Total_sum'));
     
     dc.pieChart("#total_crime_each_province")
-   
+       .width(550)
+        .height(450)
         .dimension(provinceDim)
         .group(provinceGroup)
-        .radius(200)
+        .radius(180)
         .innerRadius(25)
         .legend(dc.legend().x(5).y(10).itemHeight(25).gap(1))
         .label(function(d) {
             return d.value;
         })
         .colors(d3.scale.ordinal().range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#ef5675", "#ff764a", "#ffa600"]))
-        .width(570)
-        .height(285)
+    
         .transitionDuration(500);
 }
 
@@ -226,8 +226,8 @@ function show_offence_per_province(ndx) {
 	
     var stackedChart = dc.barChart("#offence-per-province");
     stackedChart
-        .width(620)
-        .height(390)
+        .width(640)
+        .height(450)
         .dimension(province_dim)
         .group(assault, "Assault")
             .stack(uttering_threats, "Uttering Threats")   
@@ -239,9 +239,8 @@ function show_offence_per_province(ndx) {
         .xUnits(dc.units.ordinal)
         .yAxisLabel("Proportion of offences recorded in 2008 - 2012")
         .xAxisLabel("Provinces")
-		 .margins({top: 20, left: 80, bottom: 100, right: 200})
-        .legend(dc.legend().x(450).y(10).itemHeight(15).gap(8))
-    
+		 .margins({top: 120, left: 80, bottom: 100, right: 200})
+		 .legend(dc.legend().x(350).y(0).gap(10))
 }
 
 /*------------------------------Stacked Chart #offence-per-year--*/
@@ -307,7 +306,7 @@ function show_offence_per_year(ndx) {
         .xAxisLabel("Year")
         .yAxisLabel("Number of crimes recorded")
 		.margins({top: 20, left: 80, bottom: 50, right: 200})
-        .legend(dc.legend().x(380).y(170).itemHeight(15).gap(5))
+        .legend(dc.legend().x(400).y(20).itemHeight(15).gap(5))
     
 }
 function show_year_per_offence(ndx) {
@@ -375,7 +374,7 @@ function show_year_per_offence(ndx) {
         .yAxisLabel("Proportion of offences recorded in 2011- 2012")
         .xAxisLabel("Types of Crimes")
 		 .margins({top: 20, left: 80, bottom: 80, right: 200})
-        .legend(dc.legend().x(420).y(20).itemHeight(15).gap(5))
+        .legend(dc.legend().x(350).y(20).itemHeight(15).gap(5))
     
 }
 

@@ -5,6 +5,7 @@ body{
     margin:0 auto;
     background-color: #f5f5f5;
 }
+
 /*------------------------Fonts and Headings*/
 p{
     font-family:'Roboto',sans-serif;
@@ -13,6 +14,7 @@ p{
     font-size:20px;
     padding-left:14px;
 }
+
 h3{
      font-family: 'Yanone Kaffeesatz', sans-serif;
 }
@@ -21,52 +23,46 @@ h3{
     padding-left:14px;
     color:#ffffff;
 }
-.row-chart-title,
-.bar-chart-title{
-    padding-top: 40px;
-    padding-bottom:20px;
-
-}
-.row-chart-title{
-    padding-left: 50px;
-}
-
-.pie-chart-title,
-h6{
-    padding-top:40px;
-}
-.stack-chart-title-province{
-    padding-top:30px;
-}
-
-.stack-chart-title-compare,
-.stack-chart-title-year{
-        padding-top:50px;
-}
-.dc-chart .axis text {
-       font-family:'Roboto',sans-serif;
- 
-}
-
-
 
 /*-----------------------------Containers-*/
-.chart-container-2,
-.chart-container-3,
+
 .chart-container-4,
 .chart-container-5,
 .chart-container-6,
-.chart-container-8{
+.chart-container-7,
+.chart-container-8,
+.chart-container-9{
     display: inline-block;
     width: 100%;
     margin: 0 auto;
 }
+
+/*.chart-container-4,
+.chart-container-5,
+.chart-container-6,
+.chart-container-7,
+.chart-container-8,
+.chart-container-9{
+    display: flex;
+    justify-content: center;
+}*/
+
+.chart-container-4,
+.chart-container-5,
+.chart-container-6,
+.chart-container-7,
+.chart-container-8,
+.chart-container-9{
+    padding-left: 50px;
+}
+
 .chart-header{
    background-color:#404040;
    color: #fff;
    margin-top:30px;
    padding:10px;
 }
+
 .chart-container {
    background-color: rgba(255, 255, 255, 0.8);
    margin-top:5px;
@@ -100,21 +96,21 @@ h6{
    padding-bottom:20px;
 }
 
-.year-selector-title{
-    padding-left:20px;
-}
+/*--------------------------Selectors*/
+
 .chart-container-1{
     padding-left: 160px;
 }
-.chart-container-7{
+.chart-container-2{
     padding-left: 130px;
 }
-.chart-container-9{
+.chart-container-3{
     padding-left: 120px;
 }
 
 
 /*---------------------------Row Chart styles*/
+
 #number-of-crime-row-chart>svg>g>g.row>text{
     fill: #000000;
     font-weight:600;
@@ -124,23 +120,14 @@ h6{
     letter-spacing: 0.1em;
 }
 
-.chart-container-2{
-    padding-left: 30px;
-    padding-bottom: 20px;
 
-}
-/*----------------------------Bar Chart Styles*/
-.chart-container-3{
-    padding-top: 30px;
-    padding-left: 50px;
-    padding-bottom:10px;
-}
+
 /*----------------------------Pie Chart Styles*/
 
 
 #total_crime_each_province{
    fill: #000000;
-   font-size: 50px;
+   font-size: 70px;
    font-family: 'Yanone Kaffeesatz', sans-serif;
    text-transform: uppercase; 
 }
@@ -148,23 +135,13 @@ h6{
     fill:black;
     font-size: 15px;
     font-weight: 400;
-   font-family: 'Yanone Kaffeesatz', sans-serif;
+     font-family:'Roboto',sans-serif;
   
 }
 
-.chart-container-4{
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-bottom:95px;
-}
+
 
 /*----------------------------Stack Chart Styles*/
-.chart-container-5,
-.chart-container-6,
-.chart-container-8{
-    padding-top: 40px;
-    padding-left: 50px;
-}
 
 
 #offence-per-year1>svg>g>g.axis.x>g>text {
@@ -253,133 +230,3 @@ footer{
 }
 
 
-/*-----------------Media Queries*/
-@media (min-width: 768px) and (max-width: 1024px) {
-    
-.chart-container-1{
-    padding-left: 60px;
-}
-.chart-container-7{
-    padding-left: 30px;
-}
-.chart-container-9{
-    padding-left: 25px;
-}
-}
-@media (max-width : 764px){
-    
-.chart-container-1{
-    padding-left: 50px;
-}
-.chart-container-7{
-    padding-left: 50px;
-}
-.chart-container-9{
-    padding-left: 50px;
-}
-    h1,.number-display-title{
-        font-size:25px;
-    }
-    
-    #number-display-chart{
-      margin-left:150px;
-    }
-    
-    #total-count{
-        border:100px;
-        font-size: 50px;
-        font-family:'Roboto',sans-serif;
-        font-weight:500;
-        color: #fafafa;
-        text-align: center;
-        line-height: normal;
-        padding-left: 20px;
-    }
-    
-    .row-chart-title,
-    .year-selector-title{
-        text-align:center;
-        padding-top:20px;
-    }
-    
-    #year-selector{
-      padding-left: 120px;
-    }
-    #crime-selector{
-      padding-left: 100px;
-    }
-
-
-
-    #footer-details a i{
-        display:block;
-        margin:0 auto;
-        width:50%;
-    }
-    
-    #footer-details h6{
-        text-align:center !important;
-    }
-}
-
-
-@media (min-width : 320px) 
-and (max-width : 699px){
-     h1,.number-display-title{
-        font-size:25px;
-    }
-    
-     #number-display-chart{
-       margin: 0 auto;
-       width: 100%;
-       padding-left:60px; 
-    }
-    
-    #total-count{
-        border:100px;
-        font-size: 22px;
-        font-family:'Roboto',sans-serif;
-        font-weight:500;
-        color: #fafafa;
-        text-align: center;
-        line-height: normal;
-        padding-left: 20px;
-    }
-    
-    .row-chart-title,
-    .year-selector-title{
-        text-align:center;
-        padding-top:20px;
-    }
-    
-    .chart-container-2,
-    .chart-container-3,
-    .chart-container-4,
-    .chart-container-5,
-    .chart-container-6,
-    .chart-container-8{
-        overflow: hidden;
-        overflow-x: scroll;
-        padding-left: 10px;
-        border:none;
-   }
- 
-    .chart-container-2,
-    .chart-container-3{
-        padding-left: 20px;
-   }
-   
-    #year-selector{
-      padding-left: 130px;
-    }
-
-     #footer-details a i{
-        display:block;
-        margin:0 auto;
-        width:50%;
-    }
-    
-    #footer-details h6{
-        text-align:center !important;
-    }
-}
