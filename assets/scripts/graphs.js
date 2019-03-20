@@ -44,6 +44,7 @@ function makeGraphs(error, crimeData) {
     show_total_reported(ndx);
     show_year_selector(ndx);
     show_crime_selector(ndx);
+    show_province_selector(ndx);
     show_total_crimes_commited(ndx);
     show_crimes_reported_each_year(ndx);
     show_total_crime_each_province(ndx);
@@ -94,6 +95,19 @@ function show_crime_selector(ndx){
         })
         .promptText("Select Crime Type")
         
+}
+/* ------------------------------Province selector--*/
+function show_province_selector(ndx){
+    provinceDim = ndx.dimension(dc.pluck("province"));
+    provinceGroup = provinceDim.group();
+    
+   var province = dc.selectMenu("#province-selector")
+    province.dimension(provinceDim)
+         .group(provinceGroup)
+         .title(function(d) {
+           return d.key;
+       })
+         .promptText("Select Province")
 }
 
 /*------------------------------Row Chart #number-of-crime-row-chart--*/
