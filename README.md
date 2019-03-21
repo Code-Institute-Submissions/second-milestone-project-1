@@ -102,7 +102,13 @@ On the final webpage the following test has been performed
 - The scrollable Top button is tested to check of it appears when the page is been scrolled Javascript code has been used to activate this feature
 
 ### Test Cases
-                    
+       
+| Fruit         | Price                   | Advantages              |
+| ------------- | ----------------------- | ----------------------- |
+| Bananas       | first line<br>next line | first line<br>next line |
+| Bananas       | first line<br>next line | first line<br>next line |
+
+             
 Selections  | Expected Value | Actual Value
 ------------- | -------------
 Total crimes per 100,000 inhibitiants  | 57,479.03 | 57,479
