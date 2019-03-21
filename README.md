@@ -6,15 +6,16 @@ From all Canada&apos;s crime reports that have occurred in different provinces e
 Here I have developed a visualization system using data from Ontario&apos;s Data Catalogue.
 
 
-![IMAGE](assets/images/Dashboard.JPG)
+![IMAGE](assets/images/DashBoard.JPG)
 ## User experience (UX) design
 The following features have been added to make the user experience interactive
 - The Crime Data Dashboard is a single page application with a fixed top nav bar. 
 - It provides &quot;at a glance&quot; results for policing topic areas and allows users to click through each area to learn more through visualizations.
 - It is possible to navigate through the site using mouse or arrow keys. 
-- The site provides graphs of various kinds of graphs which include Row Charts, Pie Charts, Bar charts , Number display and Select menu for refining search, thus  giving a visualized information about the crime rate for years 2008- 2012  in Canada.
-- This charts are interactive in a way that it can be filtered based on any requirements of the client just on a click
-- The web page also provide a Reset button to clear any filters applied to the webpage as well a scrolling Top button on the right which shows once the user scrolls down the page.
+- The site provides graphs of various kinds which include Row Chart, Pie Chart, Bar Chart/Stack Charts , Number display and Select menu for refining search, thus  giving a visualized information about the crime rate for years 2008- 2012  in Canada.
+- This charts are interactive in a way that it can be filtered based on any requirements of the client just on a click.
+- The web page also provide a Reset button to clear any filters applied to the webpage 
+- A scrolling Top button appears on the right of the webpage which appears once the user scrolls down the page.
 
 
 #### User Stories
@@ -24,6 +25,7 @@ The various users of this Dash Board would be
 
 As any one of the users, he/she would be interested in finding information about the following
 
+- Crime rates recorded based on Year,Provinces and a specific Crime type
 - Total crimes reported per 100,000 inhabitants for each year or collectively.
 - From all the crimes reported which crime has the highest record reported.
 - Total crime in each province of Canada.
@@ -42,6 +44,8 @@ For a Crime Analyst the dashboard could encourage further investigation, researc
 Following features have been implemented for ease of use
 - <b>Number Display</b>–Displays the total crimes reported per 100,000 inhabitants ,this value changes based on selection made using the year and crime selectors
 - <b>Year selector</b>- Provides a drop down for users to make a selection on the years(2008-2012) to fetch the crimes reported information.
+- <b> Crime Selector</b>- Provides select options for users for the different crime rates reported.
+- <b> Province Selector</b> - Drop down with the 10 provinces of Canada.
 - <b>Top 5 Offence Row Chart</b>- displays the individual crime record reported. This row chart can be filtered by clicking any crime. This would in turn act as a filter changing the other visualization on the page.
 - <b>Total crimes each year Bar chart</b>- This is a simple visualization displaying the total crimes reported each year.
 - <b>Reported Crimes each province Pie Chart</b>- This chart displayed the crimes reported in the 10 provinces in Canada.
