@@ -101,6 +101,18 @@ On the final webpage the following test has been performed
 - Reset Button is been tested to check if the filters get reset.
 - The scrollable Top button is tested to check of it appears when the page is been scrolled Javascript code has been used to activate this feature
 
+### Test Cases
+                    
+Selections  | Expected Value | Actual Value
+------------- | -------------
+Total crimes per 100,000 inhibitiants  | 57,479.03 | 57,479
+Year Selected: 2008  | 11,816.13 | 11,816
+Province Selected: Alberta  | 5451.56 | 5451
+Crime Type Selected: Assault  | 32566.09 |  32566
+Year Selected : 2009 <br>Crime type : Assault</br>| 6752.30 | 6752 
+Year Selected : 2010 <br>Crime type : Assault</br> Province: Saskatchewan| 1186.37| 1186
+
+
 ## Deployment
 
 Project is built and developed on [Cloud9](https://c9.io/) workspace

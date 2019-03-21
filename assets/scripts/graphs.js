@@ -14,7 +14,7 @@ function makeGraphs(error, crimeData) {
     //create a cross filter
     var ndx=crossfilter(crimeData);
 	 crimeData.forEach(function(d) {
-        d.Total_sum = parseInt(d["count"]);
+        d.Total_sum = parseFloat(d["count"]);
     });
      crimeData.forEach(function(d) {
         if (d.province === "NL") {
