@@ -2,9 +2,6 @@ queue()
     .defer(d3.csv,"assets/data/crimedata.csv")
     .await(makeGraphs);
 
-
-
-    
 function makeGraphs(error, crimeData) {
     //create a cross filter
     var ndx=crossfilter(crimeData);
@@ -121,7 +118,6 @@ function show_total_crimes_commited(ndx){
       .cap(5)
       .gap(2)
       .othersGrouper(false);
-  
 }
 
 /*------------------------------Bar Chart #crimes-reported-each-year--*/
@@ -164,7 +160,6 @@ function show_total_crime_each_province(ndx){
             return Math.round(d.value);
         })
         .colors(d3.scale.ordinal().range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#ef5675", "#ff764a", "	#ffd300"]))
-    
         .transitionDuration(500);
 }
 
@@ -222,17 +217,17 @@ function show_offence_per_province(ndx) {
         .height(450)
         .dimension(province_dim)
         .group(assault, "Assault")
-            .stack(uttering_threats, "Uttering Threats")   
-         .stack(robbery, "Robbery")
-          .stack(sexual_assault, "Sexual Assault")
-          .stack(criminal_harassment, "Criminal harassment")
+        .stack(uttering_threats, "Uttering Threats")   
+        .stack(robbery, "Robbery")
+        .stack(sexual_assault, "Sexual Assault")
+        .stack(criminal_harassment, "Criminal harassment")
         .x(d3.scale.ordinal())
         .barPadding(.1)
         .xUnits(dc.units.ordinal)
         .yAxisLabel("Proportion of offences recorded in 2008 - 2012")
         .xAxisLabel("Provinces")
-		 .margins({top: 120, left: 80, bottom: 100, right: 200})
-		 .legend(dc.legend().x(350).y(0).gap(10))
+		.margins({top: 120, left: 80, bottom: 100, right: 200})
+		.legend(dc.legend().x(350).y(0).gap(10))
 }
 
 /*------------------------------Stacked Chart #offence-per-year--*/
@@ -292,7 +287,7 @@ function show_offence_per_year(ndx) {
         .stack(sexual_assault, "Sexual assault")
 		.stack(criminal_harassment, "Criminal harassment")
         .x(d3.scale.ordinal())
-          .barPadding(.1)
+        .barPadding(.1)
         .xUnits(dc.units.ordinal)
         .xAxisLabel("Year")
         .yAxisLabel("Number of crimes recorded")
@@ -300,6 +295,8 @@ function show_offence_per_year(ndx) {
         .legend(dc.legend().x(400).y(20).itemHeight(15).gap(5))
     
 }
+
+/*------------------------------Stacked Chart #offence-per-year-type2--*/
 function show_year_per_offence(ndx) {
     var year_dim = ndx.dimension(dc.pluck('violation'));
      var year2008 = year_dim.group().reduceSum(function(d) {
@@ -351,7 +348,7 @@ function show_year_per_offence(ndx) {
 	
     var stackedChart = dc.barChart("#offence-per-year-type2");
     stackedChart
-         .width(630)
+        .width(630)
         .height(400)
         .dimension(year_dim)
         .group(year2008, "2008")
@@ -366,7 +363,6 @@ function show_year_per_offence(ndx) {
         .xAxisLabel("Types of Crimes")
 		 .margins({top: 20, left: 80, bottom: 80, right: 200})
         .legend(dc.legend().x(350).y(20).itemHeight(15).gap(5))
-    
 }
 
 
