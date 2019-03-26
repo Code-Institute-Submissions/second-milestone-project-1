@@ -2,21 +2,16 @@ queue()
     .defer(d3.csv,"assets/data/crimedata.csv")
     .await(makeGraphs);
 
-var colorCodesOffence=d3.scale.ordinal()
-    .domain(["Sexual assault", "Assault", "Robbery", "Criminal harassment", "Uttering threats"])
-    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56"])
-    
-var colorCodesYear = d3.scale.ordinal()
-    .domain(["2008","2009","2010","2011", "2012"])
-    .range(["#51A0D5","#FD6A02","#4C9900","#CC0000","#B266FF"])
+
+
     
 function makeGraphs(error, crimeData) {
     //create a cross filter
     var ndx=crossfilter(crimeData);
-	 crimeData.forEach(function(d) {
+	crimeData.forEach(function(d) {
         d.Total_sum = parseFloat(d["count"]);
     });
-     crimeData.forEach(function(d) {
+    crimeData.forEach(function(d) {
         if (d.province === "NL") {
             d.province = "Newfoundland and Labrador"
         }else if (d.province === "PE") {
@@ -65,7 +60,6 @@ function show_total_reported(ndx) {
             return d;
         })
         .group(totalCrimes)
-
 }
 
 /*------------------------------Year selector--*/
@@ -80,8 +74,8 @@ function show_year_selector(ndx){
             return d.key;
         })
         .promptText("Select Year")
-        
 }
+
 /*------------------------------Crime selector--*/
 function show_crime_selector(ndx){
     crimeDim = ndx.dimension(dc.pluck("violation"));
@@ -94,8 +88,8 @@ function show_crime_selector(ndx){
             return d.key;
         })
         .promptText("Select Crime Type")
-        
 }
+
 /* ------------------------------Province selector--*/
 function show_province_selector(ndx){
     provinceDim = ndx.dimension(dc.pluck("province"));
@@ -123,7 +117,6 @@ function show_total_crimes_commited(ndx){
       .colorAccessor(function(d) {
             return d.key;
         })
-      .colors(colorCodesOffence)
       .elasticX(true)
       .cap(5)
       .gap(2)
@@ -142,7 +135,6 @@ function show_crimes_reported_each_year(ndx){
         .dimension(crimeDim)
         .group(crimeGroup)
         .barPadding(.3)
-        .colors(colorCodesYear)
         .colorAccessor(function(d) {
             return d.key
         })
@@ -169,9 +161,9 @@ function show_total_crime_each_province(ndx){
         .innerRadius(25)
         .legend(dc.legend().x(5).y(10).itemHeight(25).gap(1))
         .label(function(d) {
-            return d.value;
+            return Math.round(d.value);
         })
-        .colors(d3.scale.ordinal().range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#ef5675", "#ff764a", "#ffa600"]))
+        .colors(d3.scale.ordinal().range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00", "#ef5675", "#ff764a", "	#ffd300"]))
     
         .transitionDuration(500);
 }
@@ -294,15 +286,14 @@ function show_offence_per_year(ndx) {
         .width(600)
         .height(400)
         .dimension(name_dim)
-        .group(sexual_assault, "Sexual assault")
-        .stack(assault, "Assault")
-		.stack(robbery ,"Robbery")
+        .group(assault, "Assault")
+        .stack(uttering_threats, "Uttering threats")
+        .stack(robbery ,"Robbery")
+        .stack(sexual_assault, "Sexual assault")
 		.stack(criminal_harassment, "Criminal harassment")
-		.stack(uttering_threats, "Uttering threats")
         .x(d3.scale.ordinal())
           .barPadding(.1)
         .xUnits(dc.units.ordinal)
-        .colors(d3.scale.ordinal().range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56"]))
         .xAxisLabel("Year")
         .yAxisLabel("Number of crimes recorded")
 		.margins({top: 20, left: 80, bottom: 50, right: 200})
@@ -358,7 +349,7 @@ function show_year_per_offence(ndx) {
     });
 
 	
-    var stackedChart = dc.barChart("#offence-per-year1");
+    var stackedChart = dc.barChart("#offence-per-year-type2");
     stackedChart
          .width(630)
         .height(400)
@@ -369,7 +360,7 @@ function show_year_per_offence(ndx) {
         .stack(year2012, "2011")
         .stack(year2012, "2012")
         .x(d3.scale.ordinal())
-          .barPadding(.1)
+         .barPadding(.1)
         .xUnits(dc.units.ordinal)
         .yAxisLabel("Proportion of offences recorded in 2011- 2012")
         .xAxisLabel("Types of Crimes")

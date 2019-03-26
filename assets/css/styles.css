@@ -144,7 +144,7 @@ h3{
 /*----------------------------Stack Chart Styles*/
 
 
-#offence-per-year1>svg>g>g.axis.x>g>text {
+#offence-per-year-type2>svg>g>g.axis.x>g>text {
    text-anchor: end!important;
    transform: rotate(-29deg);
    font-weight: bold;
@@ -237,11 +237,11 @@ footer{
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 568px){
     .chart-container-1,
     .chart-container-2,
     .chart-container-3{
-         padding-left: 50px;
+         padding-left: 150px;
     }
     .chart-container-4,
     .chart-container-5,
@@ -306,6 +306,82 @@ footer{
     .chart-container-8,
     .chart-container-9{
         padding-left:150px;
+    }
+    h1,.number-display-title{
+        font-size:25px;
+    }
+    #total-count{
+        border:100px;
+        font-size: 30px;
+        font-family:'Roboto',sans-serif;
+        font-weight:500;
+        color: #fafafa;
+        text-align: center;
+        line-height: normal;
+        padding-left: 10px;
+        padding-top:50px;
+    }
+    #number-display-chart{
+        margin-left:50px;
+    }
+    
+    #footer-details a i{
+        display:block;
+        margin:0 auto;
+        width:50%;
+    }
+    #footer-details h6{
+        text-align:center !important;
+    }
+  
+}
+
+@media screen and (max-width: 640px){
+    .chart-container-1{
+        padding-left: 110px;
+    }
+    .chart-container-2{
+        padding-left: 90px;
+    }
+    .chart-container-3{
+         padding-left: 75px;
+    }
+    .chart-container-4,
+    .chart-container-5,
+    .chart-container-6,
+    .chart-container-7,
+    .chart-container-8,
+    .chart-container-9{
+        overflow: hidden;
+        overflow-x: scroll;
+        padding-left: 10px;
+        border:none;
+    }
+    h1,.number-display-title{
+        font-size:25px;
+    }
+    #total-count{
+        border:100px;
+        font-size: 30px;
+        font-family:'Roboto',sans-serif;
+        font-weight:500;
+        color: #fafafa;
+        text-align: center;
+        line-height: normal;
+        padding-left: 10px;
+        padding-top:50px;
+    }
+    #number-display-chart{
+        margin-left:50px;
+    }
+    
+    #footer-details a i{
+        display:block;
+        margin:0 auto;
+        width:50%;
+    }
+    #footer-details h6{
+        text-align:center !important;
     }
   
 }
