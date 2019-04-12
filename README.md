@@ -80,7 +80,8 @@ The single scrollable webpage is tested across the following browsers,
 ##### Testing Tools Used
 - W3C CSS Validation Service (https://jigsaw.w3.org/css-validator/).
 -  W3C Markup Validation Service (https://validator.w3.org/).
--  Mobile Friendly Testing Tool(https://search.google.com/test/mobile-friendly
+-  Mobile Friendly Testing Tool(https://search.google.com/test/mobile-friendly)
+-  JavaScript code passes through a linter (https://jshint.com/)
 - Chrome Dev tools for inspect elements for styling purpose and media queries
 
 
